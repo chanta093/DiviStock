@@ -1,0 +1,28 @@
+name: Build Solana program
+
+on:
+  push:
+    paths:
+      - 'programs/divistock/**'
+      - '.github/workflows/build-program.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: metadaoproject/setup-anchor@v3.1.1
+        with:
+          anchor-version: 0.31.1
+          solana-cli-version: 2.1.0
+      - name: Build SBF program
+        working-directory: programs/divistock
+        run: anchor build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: divistock-program
+          path: programs/divistock/target/deploy/divistock.so
