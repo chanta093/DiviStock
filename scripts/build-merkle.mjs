@@ -54,4 +54,4 @@ const distribution = {
   claims: entries.map((entry, index) => ({ ...entry, amount: entry.amount.toString(), leaf: leaves[index].toString('hex'), proof: proofFor(index, tree) }))
 };
 await writeFile(output, `${JSON.stringify(distribution, null, 2)}\n`);
-console.log(`Wrote ${distribution.claims.length} claims and root ${distribution.merkleRoot} to ${output.pathname}`);
+console.log(`Wrote ${distribution.claims.length} claims and root ${distribution.merkleRoot} to ${String(output)}`);
