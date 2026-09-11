@@ -18,7 +18,7 @@ jobs:
       - uses: metadaoproject/setup-anchor@v3.4
         with:
           anchor-version: 0.31.1
-          solana-cli-version: 2.1.0
+          solana-cli-version: 2.3.0
       - name: Build SBF program
         working-directory: programs/divistock
         run: cargo build-sbf -- --ignore-rust-version
