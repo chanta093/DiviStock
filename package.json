@@ -1,1 +1,1 @@
-{"name":"divistock-demo","version":"0.1.0","private":true,"scripts":{"dev":"npx serve app","start":"npx serve app"}}
+{"name":"divistock-demo","version":"0.1.0","private":true,"scripts":{"dev":"npx serve app","start":"npx serve app","devnet:demo":"node scripts/run-devnet-demo.mjs","devnet:verify-double-claim":"node scripts/verify-double-claim.mjs"},"devDependencies":{"@solana/spl-token":"^0.4.13","@solana/web3.js":"^1.98.4"}}

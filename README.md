@@ -48,6 +48,19 @@ node scripts/build-merkle.mjs data/snapshot.json data/distribution.json
 
 The script hashes the same byte sequence as the program: the 32-byte decoded Solana public key followed by the entitlement as an unsigned 64-bit little-endian integer. Before presenting, verify the vault's Devnet token-account balance and open the claim transaction in Solana Explorer.
 
+## Verified Devnet flow
+
+The reference run used a test mint and one eligible holder. It completed the full lifecycle on Devnet:
+
+| Step | Explorer transaction |
+| --- | --- |
+| Program deployment | [view](https://explorer.solana.com/tx/4LjxbKUCkGioyHnG1MDmJ7hwftyzFWE4kgqk9z1wAgVhydfNmjcrS5JveC3aHaP8Tk2n49s8qT6g5VAyM1RMh1Gf?cluster=devnet) |
+| Distribution initialization | [view](https://explorer.solana.com/tx/EQTzf6dvdyyRWmETXvJdHyPRYhTqJidyVbbms6LgMKyQ7EqqsnfqE5Qc3nfxZTBJ2f96KwYNQ6BoQ3URxUh7MYc?cluster=devnet) |
+| Vault funding | [view](https://explorer.solana.com/tx/4WqAYuGtq4fSa8gTRoK5SMXVAKGHCUiRq6sRvbKgvGbcRpafP2NjbqE9CrmW94FSk3YqZg4sLcC2LR8mAgZUgGNh?cluster=devnet) |
+| Merkle claim | [view](https://explorer.solana.com/tx/5md2eyynmriWPTPaGDDqupcjo9c5mMwNTvNT1LSWxPwtSWxXUQtBvtNJgYvcXUQx6i8i3hL12Z4wxdW7A8fSA6sD?cluster=devnet) |
+
+Run `npm run devnet:verify-double-claim` to prove that the existing receipt PDA rejects another claim.
+
 ## Repository map
 
 | Path | Purpose |
