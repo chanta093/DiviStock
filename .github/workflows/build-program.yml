@@ -21,8 +21,9 @@ jobs:
           solana-cli-version: 2.1.0
       - name: Build SBF program
         working-directory: programs/divistock
-        run: anchor build
+        run: cargo build-sbf
       - uses: actions/upload-artifact@v4
         with:
           name: divistock-program
           path: programs/divistock/target/deploy/divistock.so
+          if-no-files-found: error
