@@ -1,0 +1,1 @@
+{"name":"divistock-demo","version":"0.1.0","private":true,"scripts":{"dev":"npx serve app","start":"npx serve app"}}

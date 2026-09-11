@@ -1,0 +1,27 @@
+1
+00:00:00,000 --> 00:00:16,000
+Dividends still depend on closed spreadsheets, intermediaries, and long settlement windows.
+
+2
+00:00:16,000 --> 00:00:34,000
+DiviStock makes an approved shareholder distribution verifiable, self-service, and auditable on Solana.
+
+3
+00:00:34,000 --> 00:00:54,000
+An issuer takes a snapshot, commits it as a Merkle root, and funds a USDC vault.
+
+4
+00:00:54,000 --> 00:01:17,000
+Here is one SOLX distribution on Devnet: a 25,000 USDC pool and one million eligible shares.
+
+5
+00:01:17,000 --> 00:01:40,000
+This wallet owns 5,000 SOLX shares, so its allocation is 125 USDC. The proof binds this wallet and amount to the snapshot root.
+
+6
+00:01:40,000 --> 00:02:03,000
+On claim, the program verifies the proof, transfers USDC from the vault, and creates a claim receipt.
+
+7
+00:02:03,000 --> 00:02:23,000
+The receipt PDA prevents a second claim. DiviStock makes every distribution clear and inspectable.

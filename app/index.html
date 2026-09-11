@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>DiviStock — On-chain dividends</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main>
+      <nav><a class="brand" href="#top">DIVI<span>STOCK</span></a><div class="nav-meta"><span class="pill">SOLANA DEVNET</span><button id="connect" class="ghost">Connect wallet</button></div></nav>
+      <section class="hero" id="top">
+        <p class="eyebrow">TOKENIZED EQUITY · DEMO</p>
+        <h1>Dividends that<br/><em>settle in seconds.</em></h1>
+        <p class="lede">DiviStock turns an approved shareholder snapshot into transparent USDC claims on Solana.</p>
+        <a href="#claim" class="button">View my distribution <span>↓</span></a>
+      </section>
+      <section class="metrics" aria-label="distribution totals">
+        <article><p>Distribution pool</p><strong>25,000.00 <small>USDC</small></strong><span class="positive">● Funded on Devnet</span></article>
+        <article><p>Eligible shares</p><strong>1,000,000</strong><span>Snapshot: 2026-09-01</span></article>
+        <article><p>Claimed</p><strong id="claimed-total">8,625.00 <small>USDC</small></strong><span id="claim-count">23 of 64 holders</span></article>
+      </section>
+      <section class="split">
+        <div class="stock-card"><div class="stock-head"><div><p class="eyebrow">LIVE DISTRIBUTION</p><h2>Solana Labs<br/><span>SOLX</span></h2></div><div class="mark">S</div></div><div class="chart" aria-label="Stock chart"><svg viewBox="0 0 620 160" preserveAspectRatio="none"><path d="M0 126 C36 122 48 88 82 94 S129 109 156 77 S192 100 224 56 S267 69 292 42 S347 83 379 63 S417 20 456 37 S492 59 518 24 S569 54 620 10" fill="none" stroke="currentColor" stroke-width="3"/></svg></div><div class="stock-footer"><div><span>Dividend / share</span><b>$0.025</b></div><div><span>Record date</span><b>Sep 01, 2026</b></div><div><span>Status</span><b class="positive">Open</b></div></div></div>
+        <div class="how"><p class="eyebrow">THE FLOW</p><h2>One snapshot.<br/>Many trustless claims.</h2><ol><li><b>01</b><span>Issuer funds the USDC vault and publishes a Merkle root.</span></li><li><b>02</b><span>Each holder receives a proof for their snapshot balance.</span></li><li><b>03</b><span>The program verifies the proof and records the claim.</span></li></ol></div>
+      </section>
+      <section class="claim" id="claim"><div><p class="eyebrow">YOUR ALLOCATION</p><h2>Claim your dividend.</h2><p>Your wallet is included in the SOLX snapshot. This interactive screen uses deterministic demo data until a wallet is connected.</p><div class="proof"><span>Merkle proof</span><code id="proof">8a9f…d12e · 7 hops verified</code></div></div><div class="claim-panel"><p>AVAILABLE TO CLAIM</p><strong id="amount">125.00 <small>USDC</small></strong><div class="claim-detail"><span>5,000 SOLX shares</span><span>× $0.025</span></div><button id="claim-button" class="button full">Claim 125.00 USDC</button><p class="caption" id="claim-status">No wallet transaction will be sent in demo mode.</p></div></section>
+      <section class="admin"><div><p class="eyebrow">ISSUER CONSOLE</p><h2>Distribution controls,<br/>made auditable.</h2></div><div class="admin-grid"><div><span>Vault balance</span><b>16,375.00 USDC</b></div><div><span>Merkle root</span><code>7cA9…F1bE</code></div><div><span>Duplicate claims</span><b class="positive">Rejected</b></div></div></section>
+      <footer><span>DiviStock Hackathon Demo · No real securities or funds.</span><a href="https://github.com/" target="_blank" rel="noreferrer">Source ↗</a></footer>
+    </main><script src="./app.js"></script>
+  </body>
+</html>
