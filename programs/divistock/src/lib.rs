@@ -1,7 +1,7 @@
 use anchor_lang::prelude::*;
 use anchor_spl::token::{self, Mint, Token, TokenAccount, Transfer};
 
-declare_id!("DiviStock1111111111111111111111111111111111");
+declare_id!("9YVmepQsUTN8sJ94ov34Lrrnt9ZrZSS8AAXuRjFUcory");
 
 #[program]
 pub mod divistock {

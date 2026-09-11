@@ -40,7 +40,7 @@ anchor build
 anchor deploy
 ```
 
-Set the resulting program ID in both `declare_id!` and `Anchor.toml`, then generate the root and holder proofs with:
+The Devnet program ID is `9YVmepQsUTN8sJ94ov34Lrrnt9ZrZSS8AAXuRjFUcory`. Generate the root and holder proofs with:
 
 ```bash
 node scripts/build-merkle.mjs data/snapshot.json data/distribution.json
