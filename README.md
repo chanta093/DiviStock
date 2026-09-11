@@ -8,6 +8,8 @@
 
 The interactive prototype shows one complete SOLX distribution: a funded pool, an eligible wallet, a claim, and a duplicate-claim safeguard. It intentionally starts in **simulation mode**: it sends no transaction and uses no real securities or funds.
 
+The hosted demo is deployed from `main` through GitHub Pages at `https://chanta093.github.io/DiviStock/`.
+
 Run it locally:
 
 ```bash
@@ -38,7 +40,13 @@ anchor build
 anchor deploy
 ```
 
-Set the resulting program ID in both `declare_id!` and `Anchor.toml`, then use the scripts in [`scripts/`](scripts/) to generate snapshot leaves and proofs. Before presenting, verify the vault's devnet token-account balance and open the claim transaction in Solana Explorer.
+Set the resulting program ID in both `declare_id!` and `Anchor.toml`, then generate the root and holder proofs with:
+
+```bash
+node scripts/build-merkle.mjs data/snapshot.json data/distribution.json
+```
+
+The script hashes the same byte sequence as the program: the 32-byte decoded Solana public key followed by the entitlement as an unsigned 64-bit little-endian integer. Before presenting, verify the vault's Devnet token-account balance and open the claim transaction in Solana Explorer.
 
 ## Repository map
 

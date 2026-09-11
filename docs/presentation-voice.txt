@@ -1,0 +1,13 @@
+Dividend operations still rely on closed spreadsheets, multiple intermediaries, and long settlement windows. Holders cannot independently verify their allocation or see whether the distribution pool is fully funded.
+
+DiviStock is a Solana distribution rail for tokenized equity. An issuer takes a shareholder snapshot, commits it as a Merkle root, funds a USDC vault, and lets each eligible holder claim their exact allocation.
+
+Here is one SOLX distribution on Devnet. The pool is twenty-five thousand USDC. The snapshot contains one million eligible shares, and claim progress is visible to everyone. Each holder sees only the entitlement committed to their wallet.
+
+This wallet owns five thousand SOLX shares. At two point five cents per share, its allocation is one hundred and twenty-five USDC. The Merkle proof binds this wallet and this exact amount to the published snapshot root.
+
+When the holder submits a claim, the program recomputes the leaf, verifies the proof, transfers USDC from the program-controlled vault, and creates a claim receipt. The receipt is a program-derived address unique to this distribution and holder.
+
+After the claim, the available allocation becomes zero and the aggregate claimed amount rises by one hundred and twenty-five USDC. A second claim cannot succeed because the receipt already exists. This rule is enforced by the program, not a web server.
+
+DiviStock makes the path from funded distribution to received dividend clear and inspectable. Our next steps are issuer governance, audited USDC vaults, and multiple distributions. Thank you.

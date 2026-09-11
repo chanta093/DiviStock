@@ -1,0 +1,38 @@
+{
+  "distributionId": "SOLX-2026-09",
+  "mint": "So11111111111111111111111111111111111111112",
+  "dividendPerShareMicrousc": 25000,
+  "merkleRoot": "5f5b27b23b2ec08720c6c0e269c159d0df5e1f0a38ba5c7442753ec6811901e3",
+  "claims": [
+    {
+      "wallet": "11111111111111111111111111111111",
+      "shares": 5000,
+      "amount": "125000000",
+      "leaf": "18876a872d268a6a7cc866d9baf11926a56dbaa8b82c704e1fa8625db85ece5c",
+      "proof": [
+        "121d2ef402d0b79a26bf0ff8cb90afb00fb7920b539cbf5bbdd826dc483fdb16",
+        "9f44a24abba7841cc5d29939c0f0e46a6dc0708756a82636cd29c3cc0a1c25d1"
+      ]
+    },
+    {
+      "wallet": "SysvarC1ock11111111111111111111111111111111",
+      "shares": 2500,
+      "amount": "62500000",
+      "leaf": "121d2ef402d0b79a26bf0ff8cb90afb00fb7920b539cbf5bbdd826dc483fdb16",
+      "proof": [
+        "18876a872d268a6a7cc866d9baf11926a56dbaa8b82c704e1fa8625db85ece5c",
+        "9f44a24abba7841cc5d29939c0f0e46a6dc0708756a82636cd29c3cc0a1c25d1"
+      ]
+    },
+    {
+      "wallet": "SysvarRent111111111111111111111111111111111",
+      "shares": 1000,
+      "amount": "25000000",
+      "leaf": "5166fe1b5e1e956b3f0ec1a4bc31442e9c4d1a8dcf07005a46f4851a7471ad4e",
+      "proof": [
+        "5166fe1b5e1e956b3f0ec1a4bc31442e9c4d1a8dcf07005a46f4851a7471ad4e",
+        "f7d70207de2caf145b70c67ecd2a48ee0b87f5a7180a280e1b8e5598365530a8"
+      ]
+    }
+  ]
+}

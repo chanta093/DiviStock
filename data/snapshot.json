@@ -1,0 +1,10 @@
+{
+  "distributionId": "SOLX-2026-09",
+  "mint": "So11111111111111111111111111111111111111112",
+  "dividendPerShareMicrousc": 25000,
+  "holders": [
+    { "wallet": "11111111111111111111111111111111", "shares": 5000 },
+    { "wallet": "SysvarC1ock11111111111111111111111111111111", "shares": 2500 },
+    { "wallet": "SysvarRent111111111111111111111111111111111", "shares": 1000 }
+  ]
+}
