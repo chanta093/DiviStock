@@ -21,7 +21,11 @@ jobs:
           solana-cli-version: 2.3.0
       - name: Build SBF program
         working-directory: programs/divistock
-        run: cargo build-sbf -- --ignore-rust-version
+        run: |
+          export DIVISTOCK_SBF="$HOME/.cache/solana/v1.48/platform-tools/rust"
+          export LD_LIBRARY_PATH="$DIVISTOCK_SBF/lib"
+          export RUSTC="$DIVISTOCK_SBF/bin/rustc"
+          cargo build-sbf --no-rustup-override --tools-version v1.48 -- --ignore-rust-version
       - uses: actions/upload-artifact@v4
         with:
           name: divistock-program
